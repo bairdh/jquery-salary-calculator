@@ -18,3 +18,9 @@ tr{
 .redText{
     color: red;
 }
+
+.deleteButton{
+    background-color: red;
+    color: white;
+    border-radius: .3em;
+}

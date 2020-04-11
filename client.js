@@ -75,6 +75,7 @@ function addToTable(){
             <td>${employee.id}</td>
             <td>${employee.title}</td>
             <td>${employee.annualSalary}</td>
+            <td><button id="${employee.firstName}${employeeList.indexOf(employee)}" class="deleteButton">DELETE</button></td>
         </tr>`)
 
     }
