@@ -79,7 +79,7 @@ function addToTable(){
             <td>${employee.id}</td>
             <td>${employee.title}</td>
             <td>${employee.annualSalary}</td>
-            <td><button id="${employee.firstName}${employeeList.indexOf(employee)}" class="deleteButton">DELETE</button></td>
+            <td><button id="${employee.firstName}${employeeList.indexOf(employee)}" class="deleteButton btn btn-danger">DELETE</button></td>
         </tr>`)
 
     }
@@ -98,6 +98,10 @@ function calculateMonthlyCost(){
 
     if(total > 20000){
         $('#totalSpan').addClass('redText');
+
+    }
+    else{
+        $('#totalSpan').removeClass('redText');
 
     }
 }

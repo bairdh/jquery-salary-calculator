@@ -2,25 +2,10 @@ table{
     text-align: center;
 }
 
-.employeeTr{
-    color: blue;
-}
-
-tr{
-    border: 1px solid black;
-
-}
-
 #totalMonthly{
     text-align: right;
 }
 
 .redText{
     color: red;
-}
-
-.deleteButton{
-    background-color: red;
-    color: white;
-    border-radius: .3em;
 }
