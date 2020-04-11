@@ -14,3 +14,7 @@ tr{
 #totalMonthly{
     text-align: right;
 }
+
+.redText{
+    color: red;
+}

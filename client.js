@@ -6,9 +6,9 @@
 //[x]collect input info
 //[x]clear inputs
 //[x]add info to table
-//[]calculate monthly costs
-//[]add monthly cost to DOM
-//[]monthly cost not over $20,000
+//[x]calculate monthly costs
+//[x]add monthly cost to DOM
+//[x]monthly cost not over $20,000
 //[]create delete button - no need to remove salary
 
 //------- STRETCH GOAL -------------
@@ -87,5 +87,12 @@ function calculateMonthlyCost(){
         total = total + monthly;
     }
 
-    $('#totalSpan').text(total);
+    let textTotal = total.toFixed(2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+
+    $('#totalSpan').text(textTotal);
+
+    if(total > 20000){
+        $('#totalSpan').addClass('redText');
+
+    }
 }
