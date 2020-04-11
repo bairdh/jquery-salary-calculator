@@ -10,3 +10,7 @@ tr{
     border: 1px solid black;
 
 }
+
+#totalMonthly{
+    text-align: right;
+}

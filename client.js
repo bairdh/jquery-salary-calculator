@@ -60,6 +60,7 @@ function getEmployeeInfo()
     salary.val('');
     
     addToTable();
+    calculateMonthlyCost();
     
 }
 
@@ -79,12 +80,12 @@ function addToTable(){
     }
 }
 
-let total = 0;
 function calculateMonthlyCost(){
+    let total = 0;
     for(let person of employeeList){
         let monthly = person.annualSalary / 12;
         total = total + monthly;
     }
 
-    return total;
+    $('#totalSpan').text(total);
 }
