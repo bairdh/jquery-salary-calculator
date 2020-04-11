@@ -9,12 +9,13 @@
 //[x]calculate monthly costs
 //[x]add monthly cost to DOM
 //[x]monthly cost not over $20,000
-//[]create delete button - no need to remove salary
+//[x]create delete button
+//[x]make button work
+//[x]remove salary of deleted employee
 
 //------- STRETCH GOAL -------------
-
-//add Styling
-// update total spent when employee is removed
+//[]add Styling
+//[x]update total spent when employee is removed
 //  -.text() GETTER
 //  -.data()
 
@@ -28,6 +29,9 @@ function readyNow(){
     console.log('Ready Meow!');
     
     $('#addEmployeeBtn').on('click', getEmployeeInfo);
+
+    $('table').on('click', 'button.deleteButton', deleteEmployee);
+
 }
 
 let employeeList = [];
@@ -96,4 +100,15 @@ function calculateMonthlyCost(){
         $('#totalSpan').addClass('redText');
 
     }
+}
+
+function deleteEmployee(e){
+    
+    let id = e.target.id.match(/\d+/g);
+
+    employeeList.splice(id, 1);
+
+    addToTable();
+    calculateMonthlyCost();
+    
 }
