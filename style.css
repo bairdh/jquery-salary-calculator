@@ -1,3 +1,7 @@
+.jumbotron{
+    background-color: #eee;
+}
+
 table{
     text-align: center;
 }
@@ -8,4 +12,8 @@ table{
 
 .redText{
     color: red;
+}
+
+#employeeTable, #addEmployeeDiv{
+    background-color: #eee;
 }

@@ -14,22 +14,26 @@
 
 </head>
 <body>
-    <header class="jumbotron">
-        <h1>Salary Calculator</h1>
+    <header class="jumbotron jumbotron-fluid m-3 rounded">
+        <h1 class="pl-3">Salary Calculator</h1>
     </header>
     <div class="container">
-        <div id="addEmployeeDiv">
+        <div id="addEmployeeDiv" class="rounded p-4">
             <h2>Add Employee</h2>
-            <div id="inputDiv">
-                <input type="text" id="firstNameInput" class="input-group my-2" placeholder="First Name">
-                <input type="text" id="lastNameInput" class="input-group" class="input-group my-2" placeholder="Last Name">
-                <input type="text" id="idInput" class="input-group my-2" placeholder="ID">
-                <input type="text" id="titleInput" class="input-group my-2" placeholder="Title">
-                <input type="text" id="annualSalaryInput" class="input-group my-2" placeholder="Annual Salary">
-                <button id="addEmployeeBtn" class="btn btn-success">Submit</button>
+            <div id="inputDiv" class="">
+                <div class="row ">
+                    <input type="text" id="firstNameInput" class="input-group col-lg-2 my-2 mx-3" placeholder="First Name">
+                    <input type="text" id="lastNameInput" class="input-group col-lg-2 my-2 mx-3" placeholder="Last Name">
+                    <input type="text" id="idInput" class="input-group col-lg-2 my-2 mx-3" placeholder="ID">
+                    <input type="text" id="titleInput" class="input-group col-lg-2 my-2 mx-3" placeholder="Title">
+                    <input type="text" id="annualSalaryInput" class="input-group col-lg-2 my-2 mx-3" placeholder="Annual Salary">
+                </div>
+                <div class="row">
+                    <button id="addEmployeeBtn" class="btn btn-success col-md-5 mt-2 mx-auto">Submit</button>
+                </div>
             </div> <!-- END Input DIV-->
         </div> <!-- END ADD EMPLOYEE DIV-->
-        <div id="employeeTable">
+        <div id="employeeTable" class="rounded p-4 mt-3">
             <h2>Employees</h2>
             <table class="table table-hover">
                 <thead>
@@ -47,7 +51,7 @@
                 </tbody>
             </table>
         </div> <!-- END EMPLOYEE TABLE DIV-->
-        <h2 id="totalMonthly">Total Monthly: $<span id="totalSpan">0</span></h2>
+        <h2 id="totalMonthly" class="mt-4">Total Monthly: $<span id="totalSpan">0</span></h2>
     </div><!-- END CONTAINER DIV-->
 </body>
 </html>

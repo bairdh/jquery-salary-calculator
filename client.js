@@ -55,8 +55,6 @@ function getEmployeeInfo()
 
     employeeList.push(employee);
 
-    console.log(employeeList);
-
     first.val('');
     last.val('');
     id.val('');
@@ -79,9 +77,8 @@ function addToTable(){
             <td>${employee.id}</td>
             <td>${employee.title}</td>
             <td>${employee.annualSalary}</td>
-            <td><button id="${employee.firstName}${employeeList.indexOf(employee)}" class="deleteButton btn btn-danger">DELETE</button></td>
+            <td><button id="${employee.firstName}${employee.id}" class="deleteButton btn btn-danger">DELETE</button></td>
         </tr>`)
-
     }
 }
 
@@ -98,21 +95,24 @@ function calculateMonthlyCost(){
 
     if(total > 20000){
         $('#totalSpan').addClass('redText');
-
     }
     else{
         $('#totalSpan').removeClass('redText');
-
     }
 }
 
 function deleteEmployee(e){
     
-    let id = e.target.id.match(/\d+/g);
+    let id = e.target.id.match(/\d+/g).toString();
 
-    employeeList.splice(id, 1);
+    for(let person of employeeList){
+        if(id === person.id){
+            employeeList.splice(employeeList.indexOf(person), 1); 
+            console.log(`I'm in`);
+            
+        }
+    }
 
     addToTable();
-    calculateMonthlyCost();
-    
+    // calculateMonthlyCost();
 }
